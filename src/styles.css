@@ -1,0 +1,124 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css";
+
+body{
+    background-color:#f3e5f5 ;
+    
+    /*background-image: url("C:\Users\user\Downloads\w2.jpg");*/
+}
+
+.grey.lighten-2{
+    background-color: #bdbdbd !important;
+    margin-top: 71px;
+    
+}
+
+.container{
+    margin-left: 25rem;
+    
+}
+
+
+.tabs .tab a:hover, .tabs .tab a.active{
+    /*background-color:#673ab7;*/
+    background-color: #039be5;
+    color: #ffffff !important;
+}
+
+ 
+
+.card .card-content{
+    padding: 0px 24px;
+    border-radius: 0 0 2px 2px;
+}
+
+/*for tab control */
+.tabs{
+    height:65px;
+}
+
+.tabs .tab {
+    text-transform:none !important;
+    /*line-height:65px;*/
+    height:65px;
+}
+
+.tabs .tab a {
+    font-size: 25px;
+    text-align: center;
+    color: grey !important;
+}
+
+.tabs .tab a.active{
+    border-bottom: 2px solid white;
+}
+
+
+
+/*button*/
+button.btn-submit{
+    /*background-color:#673ab7;*/
+    background-color: #039be5;
+    color: #ffffff;
+    width:100%;
+    
+}
+
+
+button.btn-submit:focus, button.btn-submit:hover{
+    /*background-color: #7a2fff;*/
+    background-color: #039be5;
+    
+}
+
+
+.input-field .prefix.active{
+      color: #7a2fff;
+}
+
+.input-field .postfix{
+    position: absolute;
+    width: 3rem;
+    right: 0px;
+    font-size: 2rem;
+    -webkit-transition: color; 
+    transition: color; 
+}
+
+.material-icons{
+    color:gray;
+}
+
+/*.toast-success {
+    background-color: #8bc34a;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }*/
+
+
+.toast-success{
+    background-color: #64dd17;
+    top: 60%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
+  }
+
+/*-----bootstap.min.css------*/
+
+/*text danger css*/
+.text-danger{color:#a94442}a.text-danger:focus,
+a.text-danger:hover{color:#843534}.bg-primary{color:#fff;background-color:#337ab7}a.bg-primary:focus,
+
+/*small tag css*/
+.small,blockquote footer,blockquote small{display:block;font-size:80%;line-height:1.42857143;color:#777}blockquote
+.small:before,blockquote footer:before,blockquote small:before{content:'\2014 \00A0'}.blockquote-reverse,blockquote.pull-right{padding-right:15px;padding-left:0;text-align:right;border-right:5px solid #eee;border-left:0}.blockquote-reverse
+.small:before,.blockquote-reverse footer:before,.blockquote-reverse small:before,blockquote.pull-right 
+.small:before,blockquote.pull-right footer:before,blockquote.pull-right small:before{content:''}.blockquote-reverse 
+.small:after,.blockquote-reverse footer:after,.blockquote-reverse small:after,blockquote.pull-right 
+.small:after,blockquote.pull-right footer:after,blockquote.pull-right small:after{content:'\00A0 \2014'}address{margin-bottom:20px;font-style:normal;line-height:1.42857143}
+

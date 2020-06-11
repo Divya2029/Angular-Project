@@ -1,0 +1,26 @@
+
+div.card-content.white{
+    min-height: 465px;
+    max-height: 465px;
+  
+}
+
+
+div.form-group{
+    min-height: 40px;
+    max-height: 40px;
+}
+button.btn-submit{
+     top: 10px;
+}
+
+/*For adding space in error messages*/
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    
+    height: 2rem;
+    }
+
+label{
+    font-size:15px;
+    }
+

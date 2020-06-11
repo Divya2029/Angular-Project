@@ -1,0 +1,109 @@
+<form [formGroup]="registrationForm" class="col s12 white">
+
+  <!--First Name and Last Name-->
+  
+  <div class="row">
+      <div class="input-field col s6">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+          
+            <input type="text" id="firstName" [class.is-invalid]="firstName.invalid && firstName.touched" formControlName="firstName" class="formControl"/>
+            <div *ngIf="firstName.invalid && firstName.touched">
+            <small class ="text-danger" *ngIf="firstName.hasError('required')">First Name is required</small>
+           </div>
+         </div>
+      </div>
+
+            <div class="input-field col s6">
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+            
+               <input type="text" id="lastName" [class.is-invalid]="lastName.invalid && lastName.touched" formControlName="lastName" class="formControl"/>
+               <div *ngIf="lastName.invalid && lastName.touched">
+               <small class ="text-danger" *ngIf="lastName.hasError('required')">Last Name is required</small>
+               </div>
+              </div>
+        </div>
+
+        
+  </div>
+
+<!--Email and Contact Number-->
+       
+<div class="row">
+      <div class="input-field col s6">
+        <div class="form-group">
+          <label for="email">Email</label>
+         
+          <input type="email" id="email" [class.is-invalid]="email.invalid && email.touched" formControlName="email" class="formControl"/>
+          <div *ngIf="email.invalid && email.touched">
+           <small class ="text-danger" *ngIf="email.hasError('required')">Email is required</small>
+           <small class ="text-danger" *ngIf="email.hasError('email')">Email is invalid</small>
+          </div>
+        </div>
+     </div>
+            
+      <div class="input-field col s6">
+        <div class="form-group">
+          <label for="contactNumber">Contact Number</label>
+        
+          <input type="tel" id="contactNumber" [class.is-invalid]="contactNumber.invalid && contactNumber.touched" formControlName="contactNumber" class="formControl"/>
+          <div *ngIf="contactNumber.invalid && contactNumber.touched">
+          <small class ="text-danger" *ngIf="contactNumber.hasError('required')">Contact Number is required</small>
+          <small class ="text-danger" *ngIf="contactNumber.hasError('pattern')">Contact Number is invalid</small>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!--Password-->
+
+    <div class="row">
+      <div class="input-field col s12">
+        <div class="form-group">
+          <label for="password">Password</label>
+      
+            <input [type]="hide ?'password':'text'" id="password" [class.is-invalid]="password.invalid && password.touched" formControlName="password" class="formControl"/>
+            <i class="material-icons postfix" (click)="hide=!hide">
+              {{hide ?'visibility':'visibility_off'}}
+             </i>
+            <div *ngIf="password.invalid && password.touched">
+            <small class ="text-danger" *ngIf="password.hasError('required')">Password is required</small>
+            <small class ="text-danger" *ngIf="password.errors?.pattern">Password must be between 4 to 8 characters long and include atleast one numeric digit</small>
+            </div>
+            
+           
+        </div>
+  </div>
+</div>
+
+
+  <!--Confirm Password-->
+
+  <div class="row">
+    <div class="input-field col s12">
+      <div class="form-group">
+       <label for="confirmPassword">Confirm Password</label>
+     
+       <input [type]="hide ?'password':'text'" id="confirmPassword" [class.is-invalid]="registrationForm.hasError('misMatch')" formControlName="confirmPassword" class="formControl"/>
+       <i class="material-icons postfix" (click)="hide=!hide">
+        {{hide ?'visibility':'visibility_off'}}
+    </i> 
+       <small class="text-danger" *ngIf="registrationForm.hasError('misMatch')">Passwords do not match</small>
+        
+      </div>
+  </div>
+</div>
+
+<!--Button-->
+<div class="row">
+    <div class ="input-field col s12">
+        <button [disabled]="!registrationForm.valid" class="waves-effect waves-light btn btn-large btn-submit" type="submit" (click)="showSuccess()">Sign Up</button> 
+      </div> 
+</div>
+
+</form>
+
+ <!--<div class="row">
+    {{this.registrationForm.value | json}}
+   </div>--> 

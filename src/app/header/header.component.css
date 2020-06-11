@@ -1,0 +1,110 @@
+/*.gap {
+    margin-right: 10px;
+    margin-left: 5rem;
+  }*/
+
+  .title{
+    margin-left:0.5rem;
+    
+  }
+  .logo{
+    margin-left:5rem;
+    margin-top:0.5rem;
+  }
+  .filler {
+    flex: 1 1 auto;
+  }
+  
+  /*Menu color*/
+  .mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color{
+    color:white;
+    
+   
+  }
+  
+  button.mat-menu-item:focus{
+    background-color: white;
+  }
+  button.mat-menu-item:hover{
+  background-color: #039be5;
+  }
+
+/*.navbar{
+    max-width:20px ;
+    height:60px;
+  }*/
+
+
+/*Home*/
+.home{
+  padding-left:30rem;
+}
+.home a {
+  float: left;
+  color: #f2f2f2;
+  padding: 16px 16px;
+}
+.home a:hover {
+  background-color:#e0e0e0;
+  color: black;
+}
+.home a.active {
+  background-color:#01579b;
+  color: white;
+}
+/*logout*/
+.logout{
+  padding-left: 1rem;
+}
+.logout a {
+  float: left;
+  color: white;
+  padding: 16px 16px;
+}
+.logout a:hover {
+  background-color:#e0e0e0;
+  color: black;
+}
+
+
+.mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color[_ngcontent-cma-c2] {
+  margin:0px 500px 0px 100px;
+}
+
+.mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+  
+  position: relative;
+  vertical-align: baseline;
+  text-align: center;
+  margin:0px 600px 0px 2rem;
+  padding: 0 16px;
+  
+ 
+}
+/*button, input, optgroup, select, textarea {
+
+  margin:0px 500px 0px 500px;
+  
+}*/
+.mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6 {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  margin: 0px 5px 0px 5px;
+  
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  min-height: 64px;
+  max-width:1350px;
+  
+  
+}
+.navbar{
+  overflow-x: hidden; 
+  overflow-y: hidden;
+}
+
+
+.mat-menu-content:not(:empty) {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+    

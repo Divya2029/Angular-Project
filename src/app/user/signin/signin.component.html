@@ -1,0 +1,60 @@
+<form [formGroup]="loginForm" class="col s12 white">
+
+  <!--Email-->
+  
+  <div class="row">
+    <div class="input-field col s12">
+      <div class="form-group">
+        <i class ="material-icons prefix">email</i>
+        <label for="icon_email">Email</label>
+        <input type="email" id="icon_email" [class.is-invalid]="email.invalid && email.touched" formControlName="email" class="formControl" (change)="showEmailMsg()"/>
+        <div *ngIf="email.invalid && email.touched">
+          <small class ="text-danger" *ngIf="email.hasError('required')">Email is required</small>
+          <small class ="text-danger" *ngIf="email.hasError('email')">Email is invalid</small>
+         </div>
+          <small class="text-danger" *ngIf="(!email.hasError('required') && !email.hasError('email')) && emailVal">Please register your email</small>
+        
+         </div>
+   </div>
+   </div>
+  
+  
+  <!--Password-->
+  <div class="row">
+    <div class ="input-field col s12">
+      <div class="form-group">
+        <i class ="material-icons prefix">vpn_key</i>
+        <label for="icon_password">Password</label>
+        <input [type]="hide ?'password':'text'" id="icon_password" [class.is-invalid]="pswdVal" formControlName="password" class="formControl" (change)="showPswdMsg()" required/>
+          <i class="material-icons postfix" (click)="hide=!hide">
+        {{hide ?'visibility':'visibility_off'}}
+        </i>
+        
+        <small class ="text-danger" *ngIf="pswdVal">Password doesn't exist</small>
+         
+        
+        </div>
+    </div>
+  </div>
+  
+  <div>
+    <h5><a href="/forgot-password" id="forgot">Forgot Password?</a></h5>
+  </div>
+  
+  <!--Login Button-->
+  
+  
+  <div class="row">
+    <div class ="input-field col s12">
+        <button [disabled]="!loginForm.valid" id="btn" class="btn-large btn-submit" type="submit">
+            <a routerLink="/home" routerLinkActive="active">LOGIN</a></button> 
+    </div> 
+</div>
+
+    </form>
+  
+    <!--<div class="row">
+      {{this.loginForm.value | json}}
+     </div>-->
+     
+  

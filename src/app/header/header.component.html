@@ -1,0 +1,61 @@
+<div class="navbar">
+<mat-toolbar color = "primary">
+  
+
+<div class="logo">
+  <img src="/assets/images/logo.jpg" width="45" height="45">
+</div>
+
+<div class="title">
+    Twitter Sentiment Analysis
+</div>
+  
+<div class="home">
+<a class="active" href="/home">Home</a>
+</div> 
+
+<div class="logout">
+  <a href="/login">Logout</a>
+</div>
+    
+<span class = "filler"></span>
+
+<div>
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+ <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  
+   <button mat-menu-item [routerLink] ="['/user-profile']">
+     <mat-icon color="accent">account_circle</mat-icon>
+     <span>User Profile</span>
+   </button>
+  
+  <button mat-menu-item [routerLink] ="['/plan-subscription']">
+    <mat-icon color="accent">payment</mat-icon>
+     <span>Plan Subscription</span>
+   </button>
+  
+   <button mat-menu-item [routerLink] ="['/transaction-history']">
+    <mat-icon color="accent">history</mat-icon>
+     <span>Transaction History</span>
+   </button>
+  
+   <button mat-menu-item [routerLink] ="['/contact']">
+    <mat-icon color="accent">contact_mail</mat-icon>
+     <span>Contact</span>
+   </button>
+   
+  
+   <button mat-menu-item [routerLink] ="['/about']">
+    <mat-icon color="accent">info</mat-icon>
+     <span>About</span>
+   </button>
+  
+  </mat-menu>
+
+</div>
+
+</mat-toolbar>
+</div>
